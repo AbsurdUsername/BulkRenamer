@@ -30,7 +30,7 @@ $ python3 BulkRenamer.py
 3. Write how you want to rename the files
 4. Done
 
-### Rename the files extension
+### Rename the files extensions
 1. Select the files you want to change the extension
 2. Write how you want to change extension
 3. Done
