@@ -18,7 +18,7 @@ def RenameFileName():
         FilesList.append(FilesTuple[1])
         
     for y in FilesList:
-        print('File picked: ' + FilesList[index])
+        print('File picked ► ' + FilesList[index])
         index += 1
 
     oldName = input('Write the part of the name of the files you want to change [CASE SENSITIVE]: ')
@@ -48,7 +48,7 @@ def RenameFileExtension():
         print('File picked: ' + FilesList[index])
         index += 1
 
-    newName = input('Write how you want to change the extension [DOT EXCLUDED]: ')
+    newName = input('Write how you want to change the extension [DOT NOT INCLUDED]: ')
 
     for z in FilesList:
         keep, discard = z.split('.')
@@ -56,7 +56,10 @@ def RenameFileExtension():
         os.rename(os.path.join(FilesTuple[0], z), os.path.join(FilesTuple[0], result))
 
 
-choice = int(input('Enter 1 to rename in bulk files name or enter 2 to rename in bulk files extensions'))
+print('Welcome!')
+print('Enter 1 to rename the files names')
+print('Enter 2 to rename the files extensions')
+choice = int(input('>>'))
 if choice == 1:
     RenameFileName()
 elif choice == 2:
