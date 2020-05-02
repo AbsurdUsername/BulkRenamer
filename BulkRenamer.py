@@ -45,6 +45,8 @@ def RenameFileName():
         result = newName + keep
         os.rename(os.path.join(FilesTuple[0], z), os.path.join(FilesTuple[0], result))
 
+    print('Done!')
+
 def RenameFileExtension():
     tkinter.Tk().withdraw()
     #main list with file names and path
@@ -84,12 +86,23 @@ def RenameFileExtension():
         result = keep + '.' + newName
         os.rename(os.path.join(FilesTuple[0], z), os.path.join(FilesTuple[0], result))
 
+    print('Done!')
+
 
 print('Welcome!')
-print('Enter 1 to rename the files names')
-print('Enter 2 to rename the files extensions')
-choice = int(input('>>'))
-if choice == 1:
-    RenameFileName()
-elif choice == 2:
-    RenameFileExtension()
+
+choice = 10
+
+while choice != 0:
+    print('Enter 1 to rename the files names')
+    print('Enter 2 to rename the files extensions')
+    print('Enter 0 to exit the program')
+    choice = int(input('>>'))
+    if choice == 1:
+        RenameFileName()
+    elif choice == 2:
+        RenameFileExtension()
+    elif choice == 0:
+        sys.exit()
+    elif choice != 0 or choice != 1 or choice !=2:
+        print(' ! Invalid number, please enter a proper number')
