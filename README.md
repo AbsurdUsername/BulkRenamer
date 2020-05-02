@@ -23,6 +23,8 @@ $ python3 BulkRenamer.py
 > cd BulkRenamer
 > BulkRenamer.py
 ```
+**Alternatively**
+Download the latest release [here](https://github.com/AbsurdUsername/BulkRenamer/releases/)
 
 ### Rename the files names
 1. Select the files you want to change the name
