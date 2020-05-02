@@ -1,4 +1,5 @@
 import os
+import sys
 import tkinter
 from tkinter.filedialog import askopenfilenames
 
@@ -22,6 +23,20 @@ def RenameFileName():
         index += 1
 
     oldName = input('Write the part of the name of the files you want to change [CASE SENSITIVE]: ')
+
+    index = 0
+    for k in FilesList:
+        strtest = FilesList[index]
+        if not (oldName in strtest):
+            print(' ! It appears that one of the files you selected does not contains: ' + oldName)
+            print('Do you want to remove the element? No will exit the program (y/n)')
+            pick = input('>> ')
+            if pick == 'n' or pick == 'no' or pick == 'No' or pick == 'NO':
+                sys.exit()
+            elif pick == 'y' or pick == 'yes' or pick == 'Yes' or pick == 'YES':
+                FilesList.pop(index)
+        index += 1
+
     newName = input('Write how you want to rename the files: ')
 
     for z in FilesList:
@@ -45,7 +60,7 @@ def RenameFileExtension():
         FilesList.append(FilesTuple[1])
         
     for y in FilesList:
-        print('File picked: ' + FilesList[index])
+        print('File picked ► ' + FilesList[index])
         index += 1
 
     newName = input('Write how you want to change the extension [DOT NOT INCLUDED]: ')
