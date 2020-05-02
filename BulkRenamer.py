@@ -28,8 +28,9 @@ def RenameFileName():
     for k in FilesList:
         strtest = FilesList[index]
         if not (oldName in strtest):
-            print(' ! It appears that one of the files you selected does not contains: ' + oldName)
-            print('Do you want to remove the element? No will exit the program (y/n)')
+            print(' ! It appears that one of the files you selected does not contain: ' + oldName)
+            print('File in question ► ' + strtest)
+            print('Do you want to remove the element? \'No\' will exit the program (y/n)')
             pick = input('>> ')
             if pick == 'n' or pick == 'no' or pick == 'No' or pick == 'NO':
                 sys.exit()
@@ -47,7 +48,7 @@ def RenameFileName():
 def RenameFileExtension():
     tkinter.Tk().withdraw()
     #main list with file names and path
-    Files = askopenfilenames(title='Choose the files you want to rename')
+    Files = askopenfilenames(title='Choose the files you want to change extension')
 
     FilesTuple = tuple()
     FilesList = list()
@@ -64,6 +65,19 @@ def RenameFileExtension():
         index += 1
 
     newName = input('Write how you want to change the extension [DOT NOT INCLUDED]: ')
+
+    index = 0
+    for k in FilesList:
+        strtest = FilesList[index]
+        name, ext = k.split('.')
+        if (ext in newName):
+            print(' ! It appears that one of the files you selected contains: ' + ext)
+            print('File in question ► ' + strtest)
+            print('Do you want to remove the element? \'No\' won\'t affect the process (y/n)')
+            pick = input('>> ')
+            if pick == 'y' or pick == 'yes' or pick == 'Yes' or pick == 'YES':
+                FilesList.pop(index)
+        index += 1
 
     for z in FilesList:
         keep, discard = z.split('.')
