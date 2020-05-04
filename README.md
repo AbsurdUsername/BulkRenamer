@@ -24,6 +24,7 @@ $ python3 BulkRenamer.py
 > BulkRenamer.py
 ```
 **Alternatively**
+
 Download the latest release [here](https://github.com/AbsurdUsername/BulkRenamer/releases/)
 
 ### Rename the files names
@@ -32,7 +33,11 @@ Download the latest release [here](https://github.com/AbsurdUsername/BulkRenamer
 3. Write how you want to rename the files
 4. Done
 
+![](https://i.imgur.com/tUOA9gT.png)
+
 ### Rename the files extensions
 1. Select the files you want to change the extension
 2. Write how you want to change extension
 3. Done
+
+![](https://i.imgur.com/V5TsN2h.png)
