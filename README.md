@@ -23,9 +23,15 @@ $ python3 BulkRenamer.py
 > cd BulkRenamer
 > BulkRenamer.py
 ```
-**Alternatively**
+### Alternatively
 
 Download the latest release [here](https://github.com/AbsurdUsername/BulkRenamer/releases/)
+
+### Or build it yourself
+```
+$ pip install pyinstaller
+$ pyinstaller [-F] [-i icon.ico] BulkRenamer.py
+```
 
 ### Rename the files names
 1. Select the files you want to change the name
@@ -33,11 +39,11 @@ Download the latest release [here](https://github.com/AbsurdUsername/BulkRenamer
 3. Write how you want to rename the files
 4. Done
 
-![](https://i.imgur.com/tUOA9gT.png)
+![](Images/cmdNames.png)
 
 ### Rename the files extensions
 1. Select the files you want to change the extension
 2. Write how you want to change extension
 3. Done
 
-![](https://i.imgur.com/V5TsN2h.png)
+![](Images/cmdExtensions.png)
